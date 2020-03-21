@@ -18,7 +18,7 @@ class Session extends AppBase{
             //     //exit;
             // }
 
-            return json_encode(array('success' => 'true', 'sd' => $_SESSION['us']));
+            return json_encode(array('success' => 'true', 'sd' => 'hello'));
         }
         catch(ADODB_Exception $e)
         {
