@@ -9,8 +9,9 @@
     // header('Access-Control-Expose-Headers: Content-Disposition');
 
     session_start();
+    $POST = json_decode(file_get_contents('php://input'),true);
 
-    error_log('Testing...'.print_r($_POST,true));
+    error_log('Testing...'.print_r($POST,true));
     //TOD:: create a session write fxn 
     if(isset($_POST['s']) && $_POST['m']=='l'){
         $s = $_POST['s'];
