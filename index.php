@@ -1,6 +1,6 @@
 <?php
     // include_once "config.php";
-    include_once "autoload.php";
+    // include_once "autoload.php";
 
 
     // header('Access-Control-Allow-Origin: *');
@@ -11,14 +11,15 @@
     session_start();
 
     //TOD:: create a session write fxn 
-    if(isset($_POST['s']) && $_POST['m']=='l'){
-        $s = $_POST['s'];
-        $a = $_POST['a'];
+    // if(isset($_POST['s']) && $_POST['m']=='l'){
+    //     $s = $_POST['s'];
+    //     $a = $_POST['a'];
 
-        if(class_exists($s)) {
-            $obj = new $s();
-            if(method_exists($s,$a)) {
-                echo $obj->{$a}($_POST);
-            }
-        }
-    } 
+    //     if(class_exists($s)) {
+    //         $obj = new $s();
+    //         if(method_exists($s,$a)) {
+    //             echo $obj->{$a}($_POST);
+    //         }
+    //     }
+    // } 
+    echo "hey";
