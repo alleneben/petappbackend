@@ -11,16 +11,16 @@
     session_start();
     $POST = json_decode(file_get_contents('php://input'),true);
 
-    error_log('Testing...'.print_r($POST,true));
+    error_log('Testing...'.print_r($POST['s'],true));
     //TOD:: create a session write fxn 
-    if(isset($_POST['s']) && $_POST['m']=='l'){
-        $s = $_POST['s'];
-        $a = $_POST['a'];
+    if(isset($POST['s']) && $POST['m']=='l'){
+        $s = $POST['s'];
+        $a = $POST['a'];
 
         if(class_exists($s)) {
             $obj = new $s();
             if(method_exists($s,$a)) {
-                echo $obj->{$a}($_POST);
+                echo $obj->{$a}($POST);
             }
         }
     } 
