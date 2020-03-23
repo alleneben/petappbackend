@@ -8,7 +8,7 @@
 				//use ADODB
 				$db = NewADOConnection('postgres');
 				$db->SetFetchMode(ADODB_FETCH_ASSOC);
-				$db->Connect('localhost','postgres','naas','gym');
+				$db->Connect('localhost','postgres','minuteman1d','petsdb');
 				// $db->Connect('localhost','postgres','ampofo07','ampofodb');
 				// $db->Connect('localhost','kitciojt_gymnuser','$?{gq}Um}&t%','kitciojt_gymn');
 				// $db->Connect('localhost','postgres','minuteman1d','pos');

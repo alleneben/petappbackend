@@ -7,13 +7,13 @@ class User extends AppBase{
     }
 
     public function SignUp($pd){
-        error_log('POST DATA'.print_r($pd,true));
+        
         try {
             
             
-            $fp = json_decode($pd['dd'],true);
+            $fp = json_decode($pd['data'],true);
             $f = $pd['dbf'];
-
+            error_log('POST DATA'.print_r($fp,true));
             
             //required fields
             $rv = array();

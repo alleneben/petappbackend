@@ -15,7 +15,7 @@
 				error_log("all ".print_r($_SESSION['us'],true));
 			}
 
-			$this->userid=$_SESSION['us']['rid'];
+			$this->userid=4;//$_SESSION['us']['rid'];
 			error_log("allen: ".print_r($this->userid,true));
 		}
 
