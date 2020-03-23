@@ -7,19 +7,17 @@ class User extends AppBase{
     }
 
     public function SignUp($pd){
-        
         try {
             
             
-            $fp = json_decode($pd['data'],true);
+            $fp = $this->createprops($pd);
             $f = $pd['dbf'];
-            error_log('POST DATA'.print_r($fp,true));
             
             //required fields
             $rv = array();
             //call formating function
-            $dd = $this->formatPostSU($fp,$pd,$rv);
-            
+            $dd = $this->formatPostSU($fp,$pd['data'],$rv);
+
             //connect to db
             $dbl=new DB();
             $cnn=$dbl->Connection();

@@ -25,6 +25,13 @@
 			elseif($ftype=='t') return "'$val'";
 			else return $val;
 		}
+		public function createprops($pd) {
+			$p = array();
+			foreach ($pd['data'] as $v=>$s) {
+				$p[$v] = substr($v,-1);  
+			}
+			return $p;
+		}
 
 		public function formatPost($fp,$pv,$rv,$va=true){
 			//TODO: process $rv for required fields validation
