@@ -8,7 +8,7 @@ class User extends AppBase{
 
     public function SignUp($pd){
         try {
-            
+            error_log(print_r($pd,true));
             
             $fp = $this->createprops($pd);
             $f = $pd['dbf'];

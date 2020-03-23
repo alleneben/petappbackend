@@ -10,7 +10,7 @@
 
     session_start();
     $POST = json_decode(file_get_contents('php://input'),true);
-
+    error_log(print_r($POST,true));
     //TOD:: create a session write fxn 
     if(isset($POST['s']) && $POST['m']=='l'){
         $s = $POST['s'];
